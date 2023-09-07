@@ -1,67 +1,80 @@
 <h1>
-  The Dragon Legend 🐉! 
+  The Dragon Legend 🐉!
 </h1>
 
+<hr style="height: 3px;color: #000; background-color: #000;">
+
 <h2>Angular - Modularity of JS Framework 🦅</h2>
-<p>Hunting down the others FMs || Libraries .. 🦌</p>
+<p>Hunting down the other Frameworks & Libraries ... 🦌</p>
 
 <div>
-  <p><bold>Module_A</bold></p>
-  Components:
+  <h3><strong>Module_A</strong></h3>
+  <p><strong>Components:</strong></p>
   <ul>
     <li>Component_A1</li>
     <li>Component_A2</li>
     <li>Component_A3</li>
   </ul>
-  
-  Imports:
-  <!-- No other modules imported -->
-  
-  Exports:
-  <!-- If you want these components to be available outside of Module_A, they should be exported. -->
 
-  <p><bold>Module_B</bold></p>
-  Components:
+  <p><strong>Imports:</strong></p>
+  <p><!-- No other modules imported --></p>
+  
+  <p><strong>Exports:</strong></p>
+  <p><!-- If you want these components to be available outside of Module_A, they should be exported. --></p>
+
+  <h3><strong>Module_B</strong></h3>
+  <p><strong>Components:</strong></p>
   <ul>
     <li>Component_B1</li>
     <li>Component_B2</li>
     <li>Component_B3</li>
   </ul>
-  
-  Imports:
-  <!-- No other modules imported -->
-  
-  Exports:
-  <!-- If you want these components to be available outside of Module_B, they should be exported. -->
 
-  <p><bold>AppModule (Main Module)</bold></p>
-  Components:
+  <p><strong>Imports:</strong></p>
+  <p><!-- No other modules imported --></p>
+  
+  <p><strong>Exports:</strong></p>
+  <p><!-- If you want these components to be available outside of Module_B, they should be exported. --></p>
+
+  <h3><strong>AppModule (Main Module)</strong></h3>
+  <p><strong>Components:</strong></p>
   <ul>
     <li>AppComponent (usually the root component)</li>
   </ul>
-  
-  Imports:
+
+  <p><strong>Imports:</strong></p>
   <ul>
     <li>Module_A (importing the entire Module_A)</li>
     <li>Module_B (importing the entire Module_B)</li>
   </ul>
 </div>
 
-<hr>
-<h2>Router-outlet</h2>
-<hr>
+<hr style="height: 3px;color: #000; background-color: #000;">
+
+<h2>Router-outlet Explained</h2>
 
 <p>
-  The <bold>router-outlet</bold> directive in Angular acts as a placeholder where the router should display the component for the current route. It's like a dynamic component loader controlled by the router.
+  The <strong>router-outlet</strong> directive in Angular acts as a placeholder where the router displays the component for the current route. It dynamically loads components based on the navigation.
 
-    When you navigate between routes, Angular removes the previous component and inserts the new component in place of the <bold>router-outlet</bold>. This allows you to switch between different parts of your application without a full page reload.
-    
-    Here's a simple example:
-    
-    Let's say you have two routes: /home and /about.
-    Both routes are tied to two separate components: HomeComponent and AboutComponent.
-    When a user navigates to /home, the HomeComponent will be loaded and displayed where the <bold>router-outlet</bold> is located in your main app template.
-    When the user navigates to /about, the HomeComponent will be removed, and the AboutComponent will be loaded and displayed in the same spot.
+  As you switch between routes, Angular transitions between components without a full page reload. For instance, with routes like `/home` and `/about` tied to `HomeComponent` and `AboutComponent` respectively, navigating between them swaps out the components where the <strong>router-outlet</strong> is.
+
+  In many apps, you'll find static components (e.g., navigation bars or footers) that remain visible regardless of the route. They sit alongside the <strong>router-outlet</strong> in the template.
 </p>
+
+Example:
+<ul>
+  <li>
+    <code>&lt;app-navbar&gt;&lt;/app-navbar&gt;</code> <!-- A navbar that's always visible -->
+  </li>
+  <li>
+    <code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code> <!-- Dynamic content based on the route -->
+  </li>
+  <li>
+    <code>&lt;app-footer&gt;&lt;/app-footer&gt;</code> <!-- A footer that's always visible -->
+  </li>
+</ul>
+
+
+<hr style="height: 3px; color: #000; background-color: #000;">
 
 <router-outlet></router-outlet>
