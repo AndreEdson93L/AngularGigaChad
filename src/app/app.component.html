@@ -77,4 +77,59 @@ Example:
 
 <hr style="height: 3px; color: #000; background-color: #000;">
 
+<h2>Lifecycle Component</h2>
+
+<style>
+    /* Base table styling */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    table, th, td {
+        border: 1px solid #000;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    /* Alternating row colors */
+    tbody tr:nth-child(odd) {
+        background-color: #e8f4ff;  /* This is a light blue color */
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #ffffff;  /* This is white */
+    }
+</style>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lifecycle Hook</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ngOnChanges()</code></td>
+      <td>It is called every time the property input is set up or updated.</td>
+    </tr>
+    <tr>
+      <td><code>ngOnInit()</code></td>
+      <td>It is called when we are "initializing" a component. It's the right moment to do a fetch [of the initial data].</td>
+    </tr>
+    <tr>
+      <td><code>ngAfterViewInit()</code></td>
+      <td>Called once after the view (and child views) are rendered.</td>
+    </tr>
+    <tr>
+      <td><code>ngOnDestroy()</code></td>
+      <td>Cleanup logic just before Angular destroys the directive or component. Unsubscribe from Observables and detach event handlers to avoid memory leaks. Called just before the instance is destroyed.</td>
+    </tr>
+  </tbody>
+</table>
+
 <router-outlet></router-outlet>
