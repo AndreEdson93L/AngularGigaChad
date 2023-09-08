@@ -3,18 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ComponentWithObservableComponent } from './components/component-with-observable/component-with-observable.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   //Componenti del modulo (visibili da app-component)
   declarations: [
-    AppComponent
+    AppComponent,
+    ComponentWithObservableComponent
   ],
   //Import dei moduli
   //Se vogliamo rendere visibile un componente presente in un altro modulo
   //Possiamo importare qui il modulo.
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    //Add to being able to do http calls
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
