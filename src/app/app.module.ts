@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
+//Modules
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+
+//Components
 import { AppComponent } from './app.component';
 import { ComponentWithObservableComponent } from './components/component-with-observable/component-with-observable.component';
-
-import { HttpClientModule } from '@angular/common/http';
 import { MyNotesComponent } from './components/my-notes/my-notes.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
-  //Componenti del modulo (visibili da app-component)
+  //Componenti del modulo (visibili d+a app-component)
   declarations: [
     AppComponent,
     ComponentWithObservableComponent,
-    MyNotesComponent
+    MyNotesComponent,
+    NavbarComponent,
+    HomeComponent
   ],
   //Import dei moduli
   //Se vogliamo rendere visibile un componente presente in un altro modulo
@@ -24,7 +30,9 @@ import { MyNotesComponent } from './components/my-notes/my-notes.component';
     //Add to being able to do http calls
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    //Services
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

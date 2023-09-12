@@ -1,15 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { MyNotesComponent } from './components/my-notes/my-notes.component';
+import { ComponentWithObservableComponent } from './components/component-with-observable/component-with-observable.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: AppComponent
+    component: HomeComponent
+  },
+  {
+    path: 'my-notes',
+    component: MyNotesComponent
+  },
+  {
+    path: 'poke-api',
+    component: ComponentWithObservableComponent
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: 'home'
   }
 ];
 

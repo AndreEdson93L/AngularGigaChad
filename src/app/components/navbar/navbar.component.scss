@@ -1,0 +1,11 @@
+a {
+    text-decoration: none;
+    padding: 10px;
+    color: #555;
+  
+    &.active {
+      color: #000;
+      background-color: #eee;
+    }
+  }
+  
