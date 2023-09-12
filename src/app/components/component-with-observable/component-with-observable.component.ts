@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Pokemon, PokemonResponse } from 'src/app/models/pokemon.model';
 import { MyFirstServiceService } from 'src/app/services/my-first-service.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { MyFirstServiceService } from 'src/app/services/my-first-service.service
 export class ComponentWithObservableComponent {
 
   //1.Property declarations
-  public pokemons: any;
+  public pokemons: Pokemon[] = [];
 
   //2.Constructor 
   constructor(
@@ -21,7 +22,9 @@ export class ComponentWithObservableComponent {
 
   //3.Lifecycle hooks (component initialization logic.. ngOnInit() etc..)
   ngOnInit(): void {
-    this.myFirstService.fetchData().subscribe(data => {
+    //So, in essence, the subscribe method is where you tell the Observable: 
+    //"Start your work, and when you get data, this is what I want to do with it."
+    this.myFirstService.fetchData().subscribe((data: PokemonResponse) => {
       this.pokemons = data.results
     })
   }

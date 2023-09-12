@@ -1,0 +1,133 @@
+<h1>
+    The Dragon Legend 🐉!
+  </h1>
+  
+  <hr style="height: 3px;color: #000; background-color: #000;">
+  
+  <h2>Angular - Modularity of JS Framework 🦅</h2>
+  <p>Hunting down the other Frameworks & Libraries ... 🦌</p>
+  
+  <div>
+    <h3><strong>Module_A</strong></h3>
+    <p><strong>Components:</strong></p>
+    <ul>
+      <li>Component_A1</li>
+      <li>Component_A2</li>
+      <li>Component_A3</li>
+    </ul>
+  
+    <p><strong>Imports:</strong></p>
+    <p><!-- No other modules imported --></p>
+    
+    <p><strong>Exports:</strong></p>
+    <p><!-- If you want these components to be available outside of Module_A, they should be exported. --></p>
+  
+    <h3><strong>Module_B</strong></h3>
+    <p><strong>Components:</strong></p>
+    <ul>
+      <li>Component_B1</li>
+      <li>Component_B2</li>
+      <li>Component_B3</li>
+    </ul>
+  
+    <p><strong>Imports:</strong></p>
+    <p><!-- No other modules imported --></p>
+    
+    <p><strong>Exports:</strong></p>
+    <p><!-- If you want these components to be available outside of Module_B, they should be exported. --></p>
+  
+    <h3><strong>AppModule (Main Module)</strong></h3>
+    <p><strong>Components:</strong></p>
+    <ul>
+      <li>AppComponent (usually the root component)</li>
+    </ul>
+  
+    <p><strong>Imports:</strong></p>
+    <ul>
+      <li>Module_A (importing the entire Module_A)</li>
+      <li>Module_B (importing the entire Module_B)</li>
+    </ul>
+  </div>
+  
+  <hr style="height: 3px;color: #000; background-color: #000;">
+  
+  <h2>Router-outlet Explained</h2>
+  
+  <p>
+    The <strong>router-outlet</strong> directive in Angular acts as a placeholder where the router displays the component for the current route. It dynamically loads components based on the navigation.
+  
+    As you switch between routes, Angular transitions between components without a full page reload. For instance, with routes like `/home` and `/about` tied to `HomeComponent` and `AboutComponent` respectively, navigating between them swaps out the components where the <strong>router-outlet</strong> is.
+  
+    In many apps, you'll find static components (e.g., navigation bars or footers) that remain visible regardless of the route. They sit alongside the <strong>router-outlet</strong> in the template.
+  </p>
+  
+  Example:
+  <ul>
+    <li>
+      <code>&lt;app-navbar&gt;&lt;/app-navbar&gt;</code> <!-- A navbar that's always visible -->
+    </li>
+    <li>
+      <code>&lt;router-outlet&gt;&lt;/router-outlet&gt;</code> <!-- Dynamic content based on the route -->
+    </li>
+    <li>
+      <code>&lt;app-footer&gt;&lt;/app-footer&gt;</code> <!-- A footer that's always visible -->
+    </li>
+  </ul>
+  
+  
+  <hr style="height: 3px; color: #000; background-color: #000;">
+  
+  <h2>Lifecycle Component 🚢..⚓..🌊</h2>
+  
+  <style>
+      /* Base table styling */
+      table {
+          border-collapse: collapse;
+          width: 100%;
+      }
+  
+      table, th, td {
+          border: 1px solid #000;
+      }
+  
+      th, td {
+          padding: 8px;
+          text-align: left;
+      }
+  
+      /* Alternating row colors */
+      tbody tr:nth-child(odd) {
+          background-color: #e8f4ff;  /* This is a light blue color */
+      }
+  
+      tbody tr:nth-child(even) {
+          background-color: #ffffff;  /* This is white */
+      }
+  </style>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Lifecycle Hook</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>ngOnChanges()</code></td>
+        <td>It is called every time the property input is set up or updated.</td>
+      </tr>
+      <tr>
+        <td><code>ngOnInit()</code></td>
+        <td>It is called when we are "initializing" a component. It's the right moment to do a fetch [of the initial data].</td>
+      </tr>
+      <tr>
+        <td><code>ngAfterViewInit()</code></td>
+        <td>Called once after the view (and child views) are rendered.</td>
+      </tr>
+      <tr>
+        <td><code>ngOnDestroy()</code></td>
+        <td>Cleanup logic just before Angular destroys the directive or component. Unsubscribe from Observables and detach event handlers to avoid memory leaks. Called just before the instance is destroyed.</td>
+      </tr>
+    </tbody>
+  </table>

@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ComponentWithObservableComponent } from './components/component-with-observable/component-with-observable.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { MyNotesComponent } from './components/my-notes/my-notes.component';
 
 @NgModule({
   //Componenti del modulo (visibili da app-component)
   declarations: [
     AppComponent,
-    ComponentWithObservableComponent
+    ComponentWithObservableComponent,
+    MyNotesComponent
   ],
   //Import dei moduli
   //Se vogliamo rendere visibile un componente presente in un altro modulo
