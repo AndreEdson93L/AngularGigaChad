@@ -12,6 +12,7 @@ import { MyNotesComponent } from './components/my-notes/my-notes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   //Componenti del modulo (visibili d+a app-component)
@@ -30,7 +31,9 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
     BrowserModule,
     AppRoutingModule,
     //Add to being able to do http calls
-    HttpClientModule
+    HttpClientModule,
+    //Two Way data binding (ngModel)
+    FormsModule
   ],
   providers: [
     //Services
