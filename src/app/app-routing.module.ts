@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MyNotesComponent } from './components/my-notes/my-notes.component';
 import { ComponentWithObservableComponent } from './components/component-with-observable/component-with-observable.component';
 import { HomeComponent } from './components/home/home.component';
+import { DataBindingComponent } from './components/data-binding/data-binding.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'poke-api',
     component: ComponentWithObservableComponent
+  },
+  {
+    path: 'data-binding',
+    component: DataBindingComponent
   },
   {
     path: '**',

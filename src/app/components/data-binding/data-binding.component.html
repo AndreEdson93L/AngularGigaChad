@@ -1,0 +1,53 @@
+<h1>Data Binding</h1>
+
+<!-- 1 . Interpolation -->
+<h2>Interpolation</h2>
+
+<div>
+    <em>Syntax: {{'{{'}} Data {{'}}'}}</em>
+    Description: It's the simplest form of data binding. 
+    With interpolation, you can incorporate string values directly from your component into your HTML templates.
+</div>
+
+<p><strong>{{ data_binding_value }}</strong></p>
+
+<hr style="height: 3px;color: #000; background-color: #000;">
+
+<!-- 2 . Property Binding -->
+<h2>Property Binding</h2>
+
+<div>
+    <em>Syntax: [property]="data"</em>
+    Description: It allows you to bind a DOM property to a component's property. 
+    It's unidirectional, meaning data flows from the component to the view.
+    The Image below is showed using "Property binding", from the logic class (.ts) to the element (.html).
+</div>
+
+<img [src]="imagePath" alt="image that shows data binding" width="600px">
+
+<hr style="height: 3px;color: #000; background-color: #000;">
+
+<!-- 3 . Event Binding -->
+<h2>Event Binding</h2>
+
+<div>
+<em>Syntax: (event)="handler()"</em>
+
+Description: It allows you to respond to user actions (like clicks, mouse movements, key presses, etc.) 
+by calling a method in the component. Data flows from the view to the component.
+</div>
+
+<button (click)="handleClick()">Clik me!</button>
+
+<hr style="height: 3px;color: #000; background-color: #000;">
+
+<!-- 4 . Two Way Data-Binding -->
+
+<h2>Two Way Data Binding</h2>
+
+<div>
+    <em>Syntax: [(ngModel)]="data"</em>
+    Description: It's a combination of property binding and event binding. 
+    It allows for data to flow in both directions: from the view to the component and vice-versa. 
+    It's often used with form elements.
+</div>

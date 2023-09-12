@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
 import { Pokemon, PokemonResponse } from 'src/app/models/pokemon.model';
 import { MyFirstServiceService } from 'src/app/services/my-first-service.service';
 
@@ -30,7 +29,4 @@ export class ComponentWithObservableComponent {
   }
   
   //4.Other component methods
-
-  dragonList: Observable<any[]> = new Observable<string[]>();
-
 }

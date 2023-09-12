@@ -11,6 +11,7 @@ import { ComponentWithObservableComponent } from './components/component-with-ob
 import { MyNotesComponent } from './components/my-notes/my-notes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
+import { DataBindingComponent } from './components/data-binding/data-binding.component';
 
 @NgModule({
   //Componenti del modulo (visibili d+a app-component)
@@ -19,7 +20,8 @@ import { HomeComponent } from './components/home/home.component';
     ComponentWithObservableComponent,
     MyNotesComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    DataBindingComponent
   ],
   //Import dei moduli
   //Se vogliamo rendere visibile un componente presente in un altro modulo
