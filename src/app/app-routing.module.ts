@@ -4,6 +4,7 @@ import { MyNotesComponent } from './components/my-notes/my-notes.component';
 import { ComponentWithObservableComponent } from './components/component-with-observable/component-with-observable.component';
 import { HomeComponent } from './components/home/home.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'data-binding',
     component: DataBindingComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   },
   {
     path: '**',

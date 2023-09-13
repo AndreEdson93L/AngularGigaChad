@@ -42,7 +42,6 @@ by calling a method in the component. Data flows from the view to the component.
 <hr style="height: 3px;color: #000; background-color: #000;">
 
 <!-- 4 . Two Way Data-Binding -->
-
 <h2>Two Way Data Binding</h2>
 
 <div>
@@ -55,3 +54,7 @@ by calling a method in the component. Data flows from the view to the component.
 <label>Type your username</label>
 <input [(ngModel)]="username">
 <p>Your username is: {{ username }}</p>
+
+<div>
+    Remember that you have to import the <em>FormsModule</em>, in the app compenent, to be able to use the [(ngModel)].
+</div>

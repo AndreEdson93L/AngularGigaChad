@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   //Componenti del modulo (visibili d+a app-component)
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     MyNotesComponent,
     NavbarComponent,
     HomeComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    RegisterComponent
   ],
   //Import dei moduli
   //Se vogliamo rendere visibile un componente presente in un altro modulo
