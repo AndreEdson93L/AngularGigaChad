@@ -2,7 +2,7 @@
 
 <h2>Template Driven Form</h2>
 
-<form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+<form (ngSubmit)="onSubmit(registrationForm)" #registrationForm="ngForm">
     <div>
         <label for="username">Username:</label>
         <input type="text" id="username" [(ngModel)]="user.username" name="username" required>

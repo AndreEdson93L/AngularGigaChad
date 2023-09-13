@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { User } from 'src/app/models/user.model';
+import { UserService } from 'src/app/services/user-service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -6,17 +9,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  user = {
+
+  user : User = {
     username: '',
     password: '',
     email: ''
   }
+ 
+  constructor(private userService: UserService){}
 
-  onSubmit(){
-    console.log({
-      "username" : this.user.username,
-      "password" : this.user.password,
-      "email" : this.user.email
-    })
+  onSubmit(registrationForm : NgForm){
+
+    this.userService.registerUser(this.user)
+    registrationForm.reset()
   }
 }
