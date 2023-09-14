@@ -17,3 +17,13 @@
     </div>
     <button type="submit" [disabled]="!registrationForm.valid">Register</button>
 </form>
+
+<h2 *ngIf="users.length">Registered Users</h2>
+
+<ul *ngFor="let user of users">
+    <li>
+       username: {{ user.username }},
+       email: {{ user.email }},
+       password: {{ user.password }}
+    </li>
+</ul>
